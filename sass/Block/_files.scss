@@ -1,0 +1,43 @@
+//#files download files
+
+#files .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#files h3 {
+    margin-block-end: $margin-top-bottom;
+}
+
+@include breakpoint(computer) {
+
+    #files .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            ". . . title"
+            "link1 link2 link3 .";
+    }
+
+    #files h3 {
+         grid-area: title;
+    }
+
+    #files .container a:nth-child(2){
+        grid-area: link1;
+    }
+
+    #files .container a:nth-child(3) {
+        grid-area: link2;
+    }
+
+    #files .container a:nth-child(4) {
+        grid-area: link3;
+    }
+
+    #files .container a {
+        width: max(5vw, 200px);
+    }
+}

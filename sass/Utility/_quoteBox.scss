@@ -1,0 +1,7 @@
+// mixin for quoteBox CSS
+
+@mixin quoteBox {
+    background-color: $color-primary;
+    border: $border-circles-accent;
+    border-radius: $border-radius;
+}

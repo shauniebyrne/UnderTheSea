@@ -1,0 +1,58 @@
+// skeleton of site
+body {
+  background-image: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-text);
+  padding: $padding;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-titles);
+}
+
+h1 {
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+}
+
+h3 {
+  font-size: $font-size-h3;
+}
+
+h4 {
+  font-size: $font-size-h4;
+}
+
+p {
+  font-size: $font-size-text;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#main {
+  text-align: center;
+  margin: $margin;
+}
+
+#about .container, #guidelines .container, #contribute .container:nth-child(2), #contribute #files .container {
+  border-block-end: $border-circles;
+  margin-block-start: $margin-top-bottom;
+}
+
+#contribute {
+  margin-block-start: $margin-top-bottom;
+}
+
+#about .container h2, #guidelines .container h2, #contribute .container h2, #contribute .container h3 {
+  background-color: $color-accent;
+  border: 4px dotted $color-secondary;
+  border-radius: $border-radius;
+  padding: $padding;
+}

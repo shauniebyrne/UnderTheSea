@@ -1,0 +1,46 @@
+// css for all links
+.skip-link {
+    background-color: $color-accent;
+    border-radius: 50%;
+    text-align: center;
+    color: $color-text;
+    text-decoration: none;
+    padding: 0.75rem;
+}
+.skip-link:hover {
+    border-style: dotted;
+    border-color: $color-secondary;
+}
+
+.link-github svg {
+    background-color: transparent;
+    max-height: 15px;
+}
+
+[class^="link-"] {
+    background-color: $color-secondary;
+    border-radius: 50%;
+    text-align: center;
+    color: $color-text;
+    text-decoration: none;
+    padding: 0.75rem;
+    display:block;
+    margin-bottom: $margin-top-bottom;
+}
+
+[class^="link-"]:hover {
+    border-style: dotted;
+    border-color: $color-accent;
+}
+
+.link-support {
+    display:inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: $color-text;
+    background-color: $color-bubbles;
+    border-radius: $border-radius;
+    padding: $padding;
+}

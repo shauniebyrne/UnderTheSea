@@ -1,0 +1,35 @@
+$color-primary: #2ec4b6 !default;
+$color-accent: #e9da68 !default;
+$color-secondary: #E18f8d !default;
+$color-background: repeating-linear-gradient(20deg,#56abc7, #007ea7 10%, #56abc7 20%)  !default;
+$color-text:black !default;
+$color-bubbles: #afeeee;
+$link-color: $color-primary !default;
+
+$border-circles: 10px dotted $color-primary !default;
+$border-circles-accent: 5px dotted $color-accent !default;
+$border-radius: 30px !default;
+$padding: 0.3rem !default;
+$margin: 10px !default;
+$margin-top-bottom: 40px;
+
+$font-weight-strong: 500 !default;
+$font-size-h1: 6rem !default;
+$font-size-h2: 2.25rem !default;
+$font-size-h3: 1.75rem !default;
+$font-size-h4: 1.35rem !default;
+$font-size-text: 1.15rem !default;
+
+// stylelint-disable
+:root {
+  --color-primary: #{$color-primary};
+  --color-accent: #{$color-accent};
+  --color-secondary: #{$color-secondary};
+  --color-background: #{$color-background};
+  --color-bubbles: #{$color-bubbles};
+  --color-text: #{$color-text};
+  --color-link: #{$link-color};
+  --font-titles: "DynaPuff", system-ui;
+  --font-text: "Montserrat Alternates", sans-serif;
+  --font-weight-strong: #{$font-weight-strong};
+}

@@ -1,0 +1,78 @@
+//#guidelines
+
+#guidelines .container h3 {
+    font-weight: $font-weight-strong;
+    background: linear-gradient(to right, $color-primary, $color-accent, $color-secondary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+@include breakpoint(computer) {
+    #guidelines .container {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        justify-items: center;
+        align-items: center;
+        grid-template-areas:
+            "gTitle ."
+            ". par1"
+            "tldr ."
+            ". par2"
+            ". par3"
+            "linkg par4";
+        position: relative;
+    }
+
+    #guidelines .container h2 {
+        grid-area: gTitle;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(360deg);
+        }
+        100% { transform: rotate(0deg); }
+    }
+
+    #guidelines .container h2::after {
+        content: "🐬";
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        top: 2%;
+        left: -25%;
+        animation: spin 8s ease-out infinite;
+    }
+
+    #guidelines .container p:nth-child(2) {
+        grid-area: par1;
+    }
+
+    #guidelines .container h3 {
+        grid-area: tldr;
+        margin-inline-start: 80%;
+        padding: $padding;
+        font-size: $font-size-h2;
+    }
+
+    #guidelines .container p:nth-child(4) {
+        grid-area: par2;
+    }
+
+    #guidelines .container p:nth-child(5) {
+        grid-area: par3;
+    }
+
+    #guidelines .container p:nth-child(6) {
+        grid-area: par4;
+    }
+
+    .link-guidelines {
+        grid-area: linkg;
+    }
+}

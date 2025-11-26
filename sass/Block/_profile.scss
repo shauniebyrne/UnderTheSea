@@ -1,0 +1,20 @@
+// profile card in corner
+.profile {
+    @include quoteBox;
+    padding: $padding;
+    text-align: center;
+    margin-block-start: $margin-top-bottom;
+    margin-inline: $margin;
+}
+
+.profile ul, .profile ul li {
+    padding: $padding;
+}
+
+@include breakpoint(computer){
+
+    .profile{
+        float: inline-end;
+        margin-block-start: 120px;
+    }
+}

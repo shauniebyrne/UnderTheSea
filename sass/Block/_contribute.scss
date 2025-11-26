@@ -1,0 +1,98 @@
+//#contribute
+
+ol {
+   @include quoteBox;
+}
+
+ol li::marker {
+    font-family: var(--font-titles);
+    font-size: $font-size-h3;
+    font-weight: $font-weight-strong;
+    color: $color-bubbles;
+}
+
+ol li {
+    font-family: var(--font-text);
+    color: $color-text;
+    margin: $margin;
+    text-align: left;
+    padding: $padding;
+}
+
+@include breakpoint(computer) {
+    #contribute > .container:first-child{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        justify-items: center;
+        align-items: center;
+        grid-template-areas:
+            ". ctitle1"
+            "parag1 ."
+            "parag2 .";
+        position: relative;
+    }
+
+    #contribute .container:first-child h2 {
+        grid-area: ctitle1;
+    }
+
+    #contribute .container:first-child h2::before {
+        content: "🦑";
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        top: 2%;
+        right: -25%;
+        animation: swim 8s linear infinite;
+    }
+
+    #contribute .container:first-child p:nth-child(2) {
+        grid-area: parag1;
+    }
+
+    #contribute .container:first-child p:nth-child(3) {
+        grid-area: parag2;
+    }
+
+    #contribute .container:nth-child(2){
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        justify-items: center;
+        align-items: center;
+        grid-template-areas:
+            "ctitle2 ."
+            ". ol";
+        position: relative;
+    }
+
+    #contribute .container:nth-child(2) h3 {
+        grid-area: ctitle2;
+    }
+
+    @keyframes scale {
+        0% { transform: scale(1); }
+        5% { transform: scale(1); }
+        25% { transform: scale(4); }
+        50% { transform: scale(1); }
+        75% { transform: scale(3); }
+        100% { transform: scale(1); }
+    }
+
+    #contribute .container:nth-child(2) h3::after {
+        content: "🐡";
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        top: 2%;
+        left: -22%;
+        animation: scale 10s linear infinite;
+    }
+
+    ol {
+        grid-area: ol;
+    }
+
+    ol li::marker {
+        font-size: $font-size-h2;
+    }
+}

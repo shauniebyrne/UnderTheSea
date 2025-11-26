@@ -1,0 +1,42 @@
+//.features and #styles
+
+#styles {
+    padding: $padding;
+}
+
+#styles h2{
+    background-color: $color-accent;
+    border-radius: $border-radius;
+    border: 4px dotted $color-secondary;
+    margin-block-start: $margin-top-bottom;
+    text-align: center;
+}
+
+.features{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin: $margin;
+    align-items: center;
+}
+
+.features li {
+    border: dotted 5px $color-accent;
+    margin: $margin;
+    padding: 10px;
+    text-align: center;
+    width: min(50vw, 900px);
+}
+
+#styles .link-allstyles {
+    @include centered;
+    width: max(5vw, 300px);
+}
+
+
+
+@include breakpoint(computer){
+    #styles h2 {
+        display: inline-block;
+    }
+}

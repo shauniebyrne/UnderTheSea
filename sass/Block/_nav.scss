@@ -1,0 +1,49 @@
+// nav
+
+nav {
+    text-align: center;
+    border-block-start: $border-circles;
+    border-block-end: $border-circles;
+    margin: $margin;
+}
+
+nav ul {
+    margin: $margin;
+
+    li {
+        padding: $padding;
+    }
+
+    li a {
+        padding: $padding;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: $font-size-h4;
+        font-weight: $font-weight-strong;
+        border-radius: $border-radius;
+        background-color: $color-accent;
+        color: $color-text
+    }
+
+    li a:visited {
+        color: #006994;
+    }
+}
+
+@include breakpoint(computer) {
+    nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        li a {
+            font-size: $font-size-h3;
+            transition: 1s;
+        }
+
+        li a:hover {
+            color: $color-text;
+            background-color: $color-primary;
+        }
+    }
+}

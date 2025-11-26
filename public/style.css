@@ -1,0 +1,1046 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --color-primary: #2ec4b6;
+  --color-accent: #e9da68;
+  --color-secondary: #E18f8d;
+  --color-background: repeating-linear-gradient(20deg, #56abc7, #007ea7 10%, #56abc7 20%);
+  --color-bubbles: #afeeee;
+  --color-text: black;
+  --color-link: #2ec4b6;
+  --font-titles: "DynaPuff", system-ui;
+  --font-text: "Montserrat Alternates", sans-serif;
+  --font-weight-strong: 500;
+}
+
+body {
+  background-image: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-text);
+  padding: 0.3rem;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-titles);
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.35rem;
+}
+
+p {
+  font-size: 1.15rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#main {
+  text-align: center;
+  margin: 10px;
+}
+
+#about .container, #guidelines .container, #contribute .container:nth-child(2), #contribute #files .container {
+  border-block-end: 10px dotted #2ec4b6;
+  margin-block-start: 40px;
+}
+
+#contribute {
+  margin-block-start: 40px;
+}
+
+#about .container h2, #guidelines .container h2, #contribute .container h2, #contribute .container h3 {
+  background-color: #e9da68;
+  border: 4px dotted #E18f8d;
+  border-radius: 30px;
+  padding: 0.3rem;
+}
+
+.skip-link {
+  background-color: #e9da68;
+  border-radius: 50%;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  padding: 0.75rem;
+}
+
+.skip-link:hover {
+  border-style: dotted;
+  border-color: #E18f8d;
+}
+
+.link-github svg {
+  background-color: transparent;
+  max-height: 15px;
+}
+
+[class^=link-] {
+  background-color: #E18f8d;
+  border-radius: 50%;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  padding: 0.75rem;
+  display: block;
+  margin-bottom: 40px;
+}
+
+[class^=link-]:hover {
+  border-style: dotted;
+  border-color: #e9da68;
+}
+
+.link-support {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  background-color: #afeeee;
+  border-radius: 30px;
+  padding: 0.3rem;
+}
+
+header {
+  margin-block-start: 30px;
+}
+
+header .container {
+  text-align: center;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: " title title" " secTitle secTitle" " creator link";
+  column-gap: 10px;
+}
+
+header .container h1 {
+  border: 10px dotted #2ec4b6;
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.3rem;
+  font-size: 4rem;
+  grid-area: title;
+}
+
+header .container h2 {
+  margin: 10px;
+  font-size: 1.75rem;
+  grid-area: secTitle;
+}
+
+header .container p {
+  grid-area: creator;
+}
+
+header .container a {
+  grid-area: link;
+  align-self: center;
+}
+
+header .container p a {
+  font-size: smaller;
+}
+
+@media (min-width: 31em) {
+  header {
+    position: relative;
+  }
+
+  header .container {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "title title title" "link secTitle creator";
+  }
+
+  header .container h1::before {
+    content: "🐳";
+    display: inline-block;
+    width: 13%;
+    height: 50%;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+  }
+
+  header .container h1::after {
+    content: "🦈";
+    display: inline-block;
+    width: 13%;
+    height: 50%;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+  }
+
+  header .container h1 {
+    font-size: 6rem;
+    padding: 30px;
+    max-width: 100%;
+  }
+
+  header .container h2 {
+    font-size: 2.25rem;
+  }
+
+  header .container p {
+    align-self: center;
+    justify-self: center;
+  }
+
+  header .container a {
+    justify-self: center;
+  }
+
+  header .container p a {
+    font-size: 1.15rem;
+  }
+}
+nav {
+  text-align: center;
+  border-block-start: 10px dotted #2ec4b6;
+  border-block-end: 10px dotted #2ec4b6;
+  margin: 10px;
+}
+
+nav ul {
+  margin: 10px;
+}
+nav ul li {
+  padding: 0.3rem;
+}
+nav ul li a {
+  padding: 0.3rem;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.35rem;
+  font-weight: 500;
+  border-radius: 30px;
+  background-color: #e9da68;
+  color: black;
+}
+nav ul li a:visited {
+  color: #006994;
+}
+
+@media (min-width: 31em) {
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  nav ul li a {
+    font-size: 1.75rem;
+    transition: 1s;
+  }
+  nav ul li a:hover {
+    color: black;
+    background-color: #2ec4b6;
+  }
+}
+#about .container:first-child blockquote {
+  background-color: #2ec4b6;
+  border: 5px dotted #e9da68;
+  border-radius: 30px;
+}
+
+blockquote p {
+  padding: 0.3rem;
+}
+
+#about .container ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" id="largerSub" version="1.1" viewBox="0 0 725.03 236.56"><!-- Generator: Adobe Illustrator 29.8.2, SVG Export Plug-In . SVG Version: 2.1.1 Build 3) --><line x1="16.92" y1="161.83" x2="53.87" y2="161.83" fill="none" stroke="%23e9da68" stroke-miterlimit="10" stroke-width="9"/><path d="M16.92,103.04c-8.62,0-16.92,12.68-16.92,28.92s8.29,29.88,16.92,29.88v-58.79Z" fill="%23e9da68"/><path d="M16.92,220.87c8.62.03,16.77-13.77,16.83-30s-8.13-29.09-16.76-29.12l-.08,59.12Z" fill="%23e9da68"/><path d="M724.13,159.86c-11.03-67.33-147.45-53.98-227.21-67.99,1.63-11.11.35-34.86-14.03-36.25,0,0-39.64,0-39.64,0,2.18-5.37-2.5-11.66-8.33-11.54-27.46-2.14-29.3,10.04-27.92-22.38,0,0,15.8,6.37,15.8,6.37l.05-28.08-22.63,9.15c.13.1-.1,9.05,0,9.41,1.86,38.58-.84,22.27-39.14,25.52-5.82-.11-10.11,6.49-7.92,11.87-43.92,2.57-54.26-14.66-72.45,35.91-69.9,6.92-146.79,6.98-189.72,41.39-9.57,1.14-38.01-5.83-37.13,11.62,1.34,28.56-10.11,51.52,30.96,46.08,6.86,14.93,23.79,28.96,61.19,36.72,57.37,11.91,172.01,5.19,256.19,5.19,121.95,0,338.53,28.5,321.91-73.01Z" fill="%23e9da68"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-origin: border-box;
+}
+
+#about .container ul li {
+  padding: 10px;
+  margin: 5px;
+  font-weight: 500;
+}
+
+#about ul li::before {
+  content: "🦐";
+  display: inline-block;
+}
+
+@media (min-width: 31em) {
+  #about .container {
+    position: relative;
+  }
+
+  @keyframes swim {
+    0% {
+      transform: translate(0, 0);
+    }
+    10% {
+      transform: translateY(-20%);
+    }
+    20% {
+      transform: translateY(-15%);
+    }
+    30% {
+      transform: translateY(-30%);
+    }
+    40% {
+      transform: translateY(-50%);
+    }
+    50% {
+      transform: translateY(-30%);
+    }
+    70% {
+      transform: translateY(-10%);
+    }
+    80% {
+      transform: translateY(-40%);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  @keyframes crab {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  #about .container:first-child h2::after {
+    content: "🐙";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    top: 2%;
+    left: -23%;
+    animation: swim 8s linear infinite;
+  }
+
+  #about .container:nth-child(2) h2::before {
+    content: "🦀";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    top: 2%;
+    right: 2%;
+    animation: crab 10s ease-in-out infinite;
+  }
+
+  #about .container:first-child {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "title ." ". para1" ". para2" ". quote" ". para3";
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  #about .container:first-child h2 {
+    grid-area: title;
+  }
+
+  #about .container:first-child p:nth-child(2) {
+    grid-area: para1;
+  }
+
+  #about .container:first-child p:nth-child(3) {
+    grid-area: para2;
+  }
+
+  #about .container:first-child blockquote {
+    grid-area: quote;
+  }
+
+  #about .container:first-child p:nth-child(5) {
+    grid-area: para3;
+  }
+
+  #about .container:nth-child(2) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: ". . title2 title2" "p1 p1 p1 ." "p2 p2 p2 ." "cssList cssList cssList ." "p3 p3 p3 ." "p4 p4 p4 .";
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  #about .container:nth-child(2) h2 {
+    grid-area: title2;
+  }
+
+  #about .container:nth-child(2) p:nth-child(2) {
+    grid-area: p1;
+  }
+
+  #about .container:nth-child(2) p:nth-child(3) {
+    grid-area: p2;
+  }
+
+  #about .container:nth-child(2) ul {
+    grid-area: cssList;
+    padding: 25px;
+  }
+
+  #about .container:nth-child(2) p:nth-child(5) {
+    grid-area: p3;
+  }
+
+  #about .container:nth-child(2) p:nth-child(6) {
+    grid-area: p4;
+  }
+}
+#guidelines .container h3 {
+  font-weight: 500;
+  background: linear-gradient(to right, #2ec4b6, #e9da68, #E18f8d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+@media (min-width: 31em) {
+  #guidelines .container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: "gTitle ." ". par1" "tldr ." ". par2" ". par3" "linkg par4";
+    position: relative;
+  }
+
+  #guidelines .container h2 {
+    grid-area: gTitle;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  #guidelines .container h2::after {
+    content: "🐬";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    top: 2%;
+    left: -25%;
+    animation: spin 8s ease-out infinite;
+  }
+
+  #guidelines .container p:nth-child(2) {
+    grid-area: par1;
+  }
+
+  #guidelines .container h3 {
+    grid-area: tldr;
+    margin-inline-start: 80%;
+    padding: 0.3rem;
+    font-size: 2.25rem;
+  }
+
+  #guidelines .container p:nth-child(4) {
+    grid-area: par2;
+  }
+
+  #guidelines .container p:nth-child(5) {
+    grid-area: par3;
+  }
+
+  #guidelines .container p:nth-child(6) {
+    grid-area: par4;
+  }
+
+  .link-guidelines {
+    grid-area: linkg;
+  }
+}
+ol {
+  background-color: #2ec4b6;
+  border: 5px dotted #e9da68;
+  border-radius: 30px;
+}
+
+ol li::marker {
+  font-family: var(--font-titles);
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #afeeee;
+}
+
+ol li {
+  font-family: var(--font-text);
+  color: black;
+  margin: 10px;
+  text-align: left;
+  padding: 0.3rem;
+}
+
+@media (min-width: 31em) {
+  #contribute > .container:first-child {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: ". ctitle1" "parag1 ." "parag2 .";
+    position: relative;
+  }
+
+  #contribute .container:first-child h2 {
+    grid-area: ctitle1;
+  }
+
+  #contribute .container:first-child h2::before {
+    content: "🦑";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    top: 2%;
+    right: -25%;
+    animation: swim 8s linear infinite;
+  }
+
+  #contribute .container:first-child p:nth-child(2) {
+    grid-area: parag1;
+  }
+
+  #contribute .container:first-child p:nth-child(3) {
+    grid-area: parag2;
+  }
+
+  #contribute .container:nth-child(2) {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: "ctitle2 ." ". ol";
+    position: relative;
+  }
+
+  #contribute .container:nth-child(2) h3 {
+    grid-area: ctitle2;
+  }
+
+  @keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    5% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(4);
+    }
+    50% {
+      transform: scale(1);
+    }
+    75% {
+      transform: scale(3);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  #contribute .container:nth-child(2) h3::after {
+    content: "🐡";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    top: 2%;
+    left: -22%;
+    animation: scale 10s linear infinite;
+  }
+
+  ol {
+    grid-area: ol;
+  }
+
+  ol li::marker {
+    font-size: 2.25rem;
+  }
+}
+ol {
+  background-color: #2ec4b6;
+  border: 5px dotted #e9da68;
+  border-radius: 30px;
+}
+
+ol li::marker {
+  font-family: var(--font-titles);
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #afeeee;
+}
+
+ol li {
+  font-family: var(--font-text);
+  color: black;
+  margin: 10px;
+  text-align: left;
+  padding: 0.3rem;
+}
+
+@media (min-width: 31em) {
+  #contribute > .container:first-child {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: ". ctitle1" "parag1 ." "parag2 .";
+    position: relative;
+  }
+
+  #contribute .container:first-child h2 {
+    grid-area: ctitle1;
+  }
+
+  #contribute .container:first-child h2::before {
+    content: "🦑";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    top: 2%;
+    right: -25%;
+    animation: swim 8s linear infinite;
+  }
+
+  #contribute .container:first-child p:nth-child(2) {
+    grid-area: parag1;
+  }
+
+  #contribute .container:first-child p:nth-child(3) {
+    grid-area: parag2;
+  }
+
+  #contribute .container:nth-child(2) {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: "ctitle2 ." ". ol";
+    position: relative;
+  }
+
+  #contribute .container:nth-child(2) h3 {
+    grid-area: ctitle2;
+  }
+
+  @keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    5% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(4);
+    }
+    50% {
+      transform: scale(1);
+    }
+    75% {
+      transform: scale(3);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  #contribute .container:nth-child(2) h3::after {
+    content: "🐡";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    top: 2%;
+    left: -22%;
+    animation: scale 10s linear infinite;
+  }
+
+  ol {
+    grid-area: ol;
+  }
+
+  ol li::marker {
+    font-size: 2.25rem;
+  }
+}
+/* ============================================
+   UNDERWATER BUBBLE ANIMATION
+   --------------------------------------------
+   File: _bubbles.scss
+   Description:
+   Creates floating bubbles that move upward with
+   varying sizes, opacity, and speed — resembling
+   underwater air bubbles.
+   Only visible on desktop view (hidden on mobile).
+   ============================================ */
+/* Notes from Shauntal - I think it will be a bit tricky to add bubbles this way
+because you can't create a class for them. They will need to be added via using ::before or ::after.
+I know that is not ideal and not what we usually do, it would be so nice if we could just change the HTML
+but that would go against the assignment, and we don't want to lose marks. I would suggest using the
+.page-footer for your parent folder and the .container as your child. That is the footer at the bottom of the
+web site. This way you can add the bubbles at the bottom and have them still rise to the top, if you still want
+to do that. If not, I understand!!!! Just adding a few under each title and having the static would be awesome
+as well. However, I would suggest NOT using the h1 for the ::before and ::after because I have already used those
+to add the little sea animals.*/
+.bubbles {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 2;
+  pointer-events: none;
+}
+.bubbles .bubble {
+  position: absolute;
+  bottom: -120px;
+  left: calc(2% * var(--i));
+  width: calc(10px + (var(--i) * 0.6px));
+  height: calc(10px + (var(--i) * 0.6px));
+  border-radius: 50%;
+  opacity: 0.7;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), rgba(173, 216, 230, 0.25));
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  animation: rise calc(5s + (var(--i) * 0.4s)) linear infinite;
+}
+.bubbles .bubble:nth-child(odd) {
+  animation-delay: calc(var(--i) * -0.2s);
+  filter: blur(1px);
+}
+.bubbles .bubble:nth-child(even) {
+  filter: blur(3px);
+  opacity: 0.4;
+}
+
+/* ============================================
+   ANIMATION KEYFRAMES
+   Controls the upward floating effect
+   and gentle scaling of bubbles.
+   ============================================ */
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0.9;
+    transform: translateY(-50vh) scale(1.1);
+  }
+  70% {
+    opacity: 0.6;
+    transform: translateY(-90vh) scale(0.9);
+  }
+  100% {
+    transform: translateY(-120vh) scale(0.8);
+    opacity: 0.1;
+  }
+}
+/* ============================================
+   RESPONSIVE BEHAVIOR
+   Hide bubbles on smaller devices
+   (e.g., tablets and phones)
+   ============================================ */
+@media screen and (max-width: 768px) {
+  .bubbles {
+    display: none;
+  }
+}
+#files .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#files h3 {
+  margin-block-end: 40px;
+}
+
+@media (min-width: 31em) {
+  #files .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: ". . . title" "link1 link2 link3 .";
+  }
+
+  #files h3 {
+    grid-area: title;
+  }
+
+  #files .container a:nth-child(2) {
+    grid-area: link1;
+  }
+
+  #files .container a:nth-child(3) {
+    grid-area: link2;
+  }
+
+  #files .container a:nth-child(4) {
+    grid-area: link3;
+  }
+
+  #files .container a {
+    width: max(5vw, 200px);
+  }
+}
+#files .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#files h3 {
+  margin-block-end: 40px;
+}
+
+@media (min-width: 31em) {
+  #files .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: ". . . title" "link1 link2 link3 .";
+  }
+
+  #files h3 {
+    grid-area: title;
+  }
+
+  #files .container a:nth-child(2) {
+    grid-area: link1;
+  }
+
+  #files .container a:nth-child(3) {
+    grid-area: link2;
+  }
+
+  #files .container a:nth-child(4) {
+    grid-area: link3;
+  }
+
+  #files .container a {
+    width: max(5vw, 200px);
+  }
+}
+.profile {
+  background-color: #2ec4b6;
+  border: 5px dotted #e9da68;
+  border-radius: 30px;
+  padding: 0.3rem;
+  text-align: center;
+  margin-block-start: 40px;
+  margin-inline: 10px;
+}
+
+.profile ul, .profile ul li {
+  padding: 0.3rem;
+}
+
+@media (min-width: 31em) {
+  .profile {
+    float: inline-end;
+    margin-block-start: 120px;
+  }
+}
+#styles {
+  padding: 0.3rem;
+}
+
+#styles h2 {
+  background-color: #e9da68;
+  border-radius: 30px;
+  border: 4px dotted #E18f8d;
+  margin-block-start: 40px;
+  text-align: center;
+}
+
+.features {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin: 10px;
+  align-items: center;
+}
+
+.features li {
+  border: dotted 5px #e9da68;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  width: min(50vw, 900px);
+}
+
+#styles .link-allstyles {
+  margin-left: auto;
+  margin-right: auto;
+  width: max(5vw, 300px);
+}
+
+@media (min-width: 31em) {
+  #styles h2 {
+    display: inline-block;
+  }
+}
+.page-footer {
+  margin: 10px;
+  border: 10px dotted #2ec4b6;
+}
+
+.page-footer .container {
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-footer .container p:first-child {
+  order: 2;
+}
+
+.page-footer .container ul {
+  order: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "twitter rssfeed" "github subscribe";
+}
+
+.page-footer .container ul li {
+  margin-block-start: 30px;
+  margin-block-end: 30px;
+}
+
+.page-footer .container ul li:first-child {
+  grid-area: twitter;
+  font-size: smaller;
+}
+
+.page-footer .container ul li:nth-child(2) {
+  grid-area: github;
+  font-size: smaller;
+}
+
+.page-footer .container ul li:nth-child(3) {
+  grid-area: rssfeed;
+}
+
+.page-footer .container ul li:nth-child(4) {
+  grid-area: subscribe;
+  font-size: smaller;
+}
+
+.page-footer .container p:nth-child(3) {
+  order: 3;
+}
+
+.page-footer .container p:nth-child(4) {
+  order: 4;
+}
+
+.link-twittercontact, .link-github, .link-rss, .link-support {
+  margin: 0;
+}
+
+@media (min-width: 31em) {
+  .page-footer .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: " created ul" " crafted ul" " contri ul";
+  }
+
+  .page-footer .container p:first-child {
+    grid-area: created;
+  }
+
+  .page-footer .container ul {
+    grid-area: ul;
+  }
+
+  .page-footer ul li a {
+    width: max(5vw, 240px);
+  }
+
+  .page-footer .container p:nth-child(3) {
+    grid-area: crafted;
+  }
+
+  .page-footer .container p:nth-child(4) {
+    grid-area: contri;
+  }
+
+  .page-footer .container ul li:nth-child(4), .page-footer .container ul li:first-child, .page-footer .container ul li:nth-child(2) {
+    font-size: 1.15rem;
+  }
+}
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizespeed;
+  overflow-x: hidden;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

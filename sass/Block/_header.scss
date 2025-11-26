@@ -1,0 +1,101 @@
+//header
+
+header {
+    margin-block-start: 30px;
+}
+
+ header .container {
+    text-align: center;
+    margin: $margin;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        " title title"
+        " secTitle secTitle"
+        " creator link" ;
+    column-gap: 10px;
+}
+
+header .container h1 {
+    border: $border-circles;
+    max-width: 70%;
+    @include centered;
+    padding: $padding;
+    font-size: 4rem;
+    grid-area: title;
+}
+
+header .container h2 {
+    margin: $margin;
+    font-size: $font-size-h3;
+    grid-area: secTitle;
+}
+
+header .container p {
+    grid-area: creator;
+}
+
+header .container a {
+    grid-area: link;
+    align-self: center;
+}
+
+header .container p a {
+    font-size: smaller;
+}
+
+@include breakpoint(computer) {
+    header {
+        position: relative;
+    }
+
+    header .container {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas:
+            "title title title"
+            "link secTitle creator";
+    }
+
+    header .container h1::before {
+        content: "🐳";
+        display: inline-block;
+        width: 13%;
+        height: 50%;
+        position: absolute;
+        top: 2%;
+        left: 2%;
+    }
+
+    header .container h1::after {
+        content: "🦈";
+        display: inline-block;
+        width: 13%;
+        height: 50%;
+        position: absolute;
+        top: 2%;
+        right: 2%;
+    }
+
+    header .container h1 {
+        font-size: $font-size-h1;
+        padding: $border-radius;
+        max-width: 100%;
+    }
+
+    header .container h2 {
+        font-size: $font-size-h2;
+    }
+
+    header .container p {
+        align-self: center;
+        justify-self: center;
+    }
+
+    header .container a {
+        justify-self: center;
+    }
+
+    header .container p a {
+        font-size: $font-size-text;
+    }
+}
