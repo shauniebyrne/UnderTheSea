@@ -1,5 +1,9 @@
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable media-feature-range-notation */
 @charset "UTF-8";
+
 @import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 :root {
   --color-primary: #2ec4b6;
   --color-accent: #e9da68;
@@ -90,7 +94,7 @@ ul {
   max-height: 15px;
 }
 
-[class^=link-] {
+[class^="link-"] {
   background-color: #E18f8d;
   border-radius: 50%;
   text-align: center;
@@ -101,7 +105,7 @@ ul {
   margin-bottom: 40px;
 }
 
-[class^=link-]:hover {
+[class^="link-"]:hover {
   border-style: dotted;
   border-color: #e9da68;
 }
@@ -202,6 +206,7 @@ header .container p a {
 
   header .container p {
     align-self: center;
+    /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
     justify-self: center;
   }
 
@@ -213,6 +218,7 @@ header .container p a {
     font-size: 1.15rem;
   }
 }
+
 nav {
   text-align: center;
   border-block-start: 10px dotted #2ec4b6;
@@ -223,9 +229,11 @@ nav {
 nav ul {
   margin: 10px;
 }
+
 nav ul li {
   padding: 0.3rem;
 }
+
 nav ul li a {
   padding: 0.3rem;
   text-decoration: none;
@@ -236,6 +244,7 @@ nav ul li a {
   background-color: #e9da68;
   color: black;
 }
+
 nav ul li a:visited {
   color: #006994;
 }
@@ -246,15 +255,18 @@ nav ul li a:visited {
     align-items: center;
     justify-content: center;
   }
+
   nav ul li a {
     font-size: 1.75rem;
     transition: 1s;
   }
+
   nav ul li a:hover {
     color: black;
     background-color: #2ec4b6;
   }
 }
+
 #about .container:first-child blockquote {
   background-color: #2ec4b6;
   border: 5px dotted #e9da68;
@@ -297,42 +309,54 @@ blockquote p {
     0% {
       transform: translate(0, 0);
     }
+
     10% {
       transform: translateY(-20%);
     }
+
     20% {
       transform: translateY(-15%);
     }
+
     30% {
       transform: translateY(-30%);
     }
+
     40% {
       transform: translateY(-50%);
     }
+
     50% {
       transform: translateY(-30%);
     }
+
     70% {
       transform: translateY(-10%);
     }
+
     80% {
       transform: translateY(-40%);
     }
+
     100% {
       transform: translate(0, 0);
     }
   }
+
   @keyframes crab {
     0% {
       transform: translateX(0);
     }
+
     50% {
       transform: translateX(-100%);
     }
+
     100% {
       transform: translateX(0);
     }
   }
+
   #about .container:first-child h2::after {
     content: "🐙";
     display: inline-block;
@@ -416,9 +440,11 @@ blockquote p {
     grid-area: p4;
   }
 }
+
 #guidelines .container h3 {
   font-weight: 500;
   background: linear-gradient(to right, #2ec4b6, #e9da68, #E18f8d);
+  /* stylelint-disable-next-line property-no-vendor-prefix */
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -430,6 +456,7 @@ blockquote p {
     display: grid;
     grid-template-columns: 1fr 3fr;
     justify-items: center;
+    /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
     align-items: center;
     grid-template-areas: "gTitle ." ". par1" "tldr ." ". par2" ". par3" "linkg par4";
     position: relative;
@@ -443,13 +470,16 @@ blockquote p {
     0% {
       transform: rotate(0deg);
     }
+
     50% {
       transform: rotate(360deg);
     }
+
     100% {
       transform: rotate(0deg);
     }
   }
+
   #guidelines .container h2::after {
     content: "🐬";
     display: inline-block;
@@ -487,6 +517,7 @@ blockquote p {
     grid-area: linkg;
   }
 }
+
 ol {
   background-color: #2ec4b6;
   border: 5px dotted #e9da68;
@@ -513,6 +544,7 @@ ol li {
     display: grid;
     grid-template-columns: 3fr 1fr;
     justify-items: center;
+    /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
     align-items: center;
     grid-template-areas: ". ctitle1" "parag1 ." "parag2 .";
     position: relative;
@@ -544,6 +576,7 @@ ol li {
     display: grid;
     grid-template-columns: 1fr 3fr;
     justify-items: center;
+    /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
     align-items: center;
     grid-template-areas: "ctitle2 ." ". ol";
     position: relative;
@@ -557,22 +590,28 @@ ol li {
     0% {
       transform: scale(1);
     }
+
     5% {
       transform: scale(1);
     }
+
     25% {
       transform: scale(4);
     }
+
     50% {
       transform: scale(1);
     }
+
     75% {
       transform: scale(3);
     }
+
     100% {
       transform: scale(1);
     }
   }
+
   #contribute .container:nth-child(2) h3::after {
     content: "🐡";
     display: inline-block;
@@ -591,190 +630,36 @@ ol li {
     font-size: 2.25rem;
   }
 }
-ol {
-  background-color: #2ec4b6;
-  border: 5px dotted #e9da68;
-  border-radius: 30px;
+
+#about, #guidelines, #contribute, #files, .profile, #styles {
+  position: relative;
 }
 
-ol li::marker {
-  font-family: var(--font-titles);
-  font-size: 1.75rem;
-  font-weight: 500;
-  color: #afeeee;
-}
-
-ol li {
-  font-family: var(--font-text);
-  color: black;
-  margin: 10px;
-  text-align: left;
-  padding: 0.3rem;
-}
-
-@media (min-width: 31em) {
-  #contribute > .container:first-child {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    justify-items: center;
-    align-items: center;
-    grid-template-areas: ". ctitle1" "parag1 ." "parag2 .";
-    position: relative;
-  }
-
-  #contribute .container:first-child h2 {
-    grid-area: ctitle1;
-  }
-
-  #contribute .container:first-child h2::before {
-    content: "🦑";
-    display: inline-block;
-    position: absolute;
-    width: 100%;
-    top: 2%;
-    right: -25%;
-    animation: swim 8s linear infinite;
-  }
-
-  #contribute .container:first-child p:nth-child(2) {
-    grid-area: parag1;
-  }
-
-  #contribute .container:first-child p:nth-child(3) {
-    grid-area: parag2;
-  }
-
-  #contribute .container:nth-child(2) {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    justify-items: center;
-    align-items: center;
-    grid-template-areas: "ctitle2 ." ". ol";
-    position: relative;
-  }
-
-  #contribute .container:nth-child(2) h3 {
-    grid-area: ctitle2;
-  }
-
-  @keyframes scale {
-    0% {
-      transform: scale(1);
-    }
-    5% {
-      transform: scale(1);
-    }
-    25% {
-      transform: scale(4);
-    }
-    50% {
-      transform: scale(1);
-    }
-    75% {
-      transform: scale(3);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  #contribute .container:nth-child(2) h3::after {
-    content: "🐡";
-    display: inline-block;
-    position: absolute;
-    width: 100%;
-    top: 2%;
-    left: -22%;
-    animation: scale 10s linear infinite;
-  }
-
-  ol {
-    grid-area: ol;
-  }
-
-  ol li::marker {
-    font-size: 2.25rem;
-  }
-}
-/* ============================================
-   UNDERWATER BUBBLE ANIMATION
-   --------------------------------------------
-   File: _bubbles.scss
-   Description:
-   Creates floating bubbles that move upward with
-   varying sizes, opacity, and speed — resembling
-   underwater air bubbles.
-   Only visible on desktop view (hidden on mobile).
-   ============================================ */
-/* Notes from Shauntal - I think it will be a bit tricky to add bubbles this way
-because you can't create a class for them. They will need to be added via using ::before or ::after.
-I know that is not ideal and not what we usually do, it would be so nice if we could just change the HTML
-but that would go against the assignment, and we don't want to lose marks. I would suggest using the
-.page-footer for your parent folder and the .container as your child. That is the footer at the bottom of the
-web site. This way you can add the bubbles at the bottom and have them still rise to the top, if you still want
-to do that. If not, I understand!!!! Just adding a few under each title and having the static would be awesome
-as well. However, I would suggest NOT using the h1 for the ::before and ::after because I have already used those
-to add the little sea animals.*/
-.bubbles {
-  position: fixed;
-  inset: 0;
-  overflow: hidden;
-  z-index: 2;
-  pointer-events: none;
-}
-.bubbles .bubble {
-  position: absolute;
-  bottom: -120px;
-  left: calc(2% * var(--i));
-  width: calc(10px + (var(--i) * 0.6px));
-  height: calc(10px + (var(--i) * 0.6px));
+#main .container::before, #main .container::after,
+.profile .container::before, .profile .container::after,
+#styles .container::before, #styles .container::after {
+  content: "";
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  opacity: 0.7;
-  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), rgba(173, 216, 230, 0.25));
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
-  animation: rise calc(5s + (var(--i) * 0.4s)) linear infinite;
-}
-.bubbles .bubble:nth-child(odd) {
-  animation-delay: calc(var(--i) * -0.2s);
-  filter: blur(1px);
-}
-.bubbles .bubble:nth-child(even) {
-  filter: blur(3px);
-  opacity: 0.4;
+  background-image: radial-gradient(circle at 70% 30%, white 10%, #6baed6);
+  position: absolute;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-/* ============================================
-   ANIMATION KEYFRAMES
-   Controls the upward floating effect
-   and gentle scaling of bubbles.
-   ============================================ */
-@keyframes rise {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 0.5;
-  }
-  40% {
-    opacity: 0.9;
-    transform: translateY(-50vh) scale(1.1);
-  }
-  70% {
-    opacity: 0.6;
-    transform: translateY(-90vh) scale(0.9);
-  }
-  100% {
-    transform: translateY(-120vh) scale(0.8);
-    opacity: 0.1;
-  }
+.container::before {
+    top: 30%;
+    left: 30%;
 }
-/* ============================================
-   RESPONSIVE BEHAVIOR
-   Hide bubbles on smaller devices
-   (e.g., tablets and phones)
-   ============================================ */
-@media screen and (max-width: 768px) {
-  .bubbles {
-    display: none;
-  }
+
+.container::after {
+  top:50%;
+  left: 40%;
 }
+
 #files .container {
   display: flex;
   flex-direction: column;
@@ -813,44 +698,7 @@ to add the little sea animals.*/
     width: max(5vw, 200px);
   }
 }
-#files .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
-#files h3 {
-  margin-block-end: 40px;
-}
-
-@media (min-width: 31em) {
-  #files .container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: ". . . title" "link1 link2 link3 .";
-  }
-
-  #files h3 {
-    grid-area: title;
-  }
-
-  #files .container a:nth-child(2) {
-    grid-area: link1;
-  }
-
-  #files .container a:nth-child(3) {
-    grid-area: link2;
-  }
-
-  #files .container a:nth-child(4) {
-    grid-area: link3;
-  }
-
-  #files .container a {
-    width: max(5vw, 200px);
-  }
-}
 .profile {
   background-color: #2ec4b6;
   border: 5px dotted #e9da68;
@@ -871,6 +719,7 @@ to add the little sea animals.*/
     margin-block-start: 120px;
   }
 }
+
 #styles {
   padding: 0.3rem;
 }
@@ -910,6 +759,7 @@ to add the little sea animals.*/
     display: inline-block;
   }
 }
+
 .page-footer {
   margin: 10px;
   border: 10px dotted #2ec4b6;
@@ -934,8 +784,7 @@ to add the little sea animals.*/
 }
 
 .page-footer .container ul li {
-  margin-block-start: 30px;
-  margin-block-end: 30px;
+  margin-block: 30px;
 }
 
 .page-footer .container ul li:first-child {
@@ -1000,10 +849,12 @@ to add the little sea animals.*/
     font-size: 1.15rem;
   }
 }
+
 /*
  * [Modified] Modern CSS Reset
  * @link https://github.com/hankchizljaw/modern-css-reset
 */
+
 /* Box sizing rules */
 *,
 *::before,
@@ -1021,6 +872,7 @@ html {
 }
 
 /* Set core body defaults */
+/* stylelint-disable-next-line no-duplicate-selectors */
 body {
   min-height: 100vh;
   font-size: 100%;

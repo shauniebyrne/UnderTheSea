@@ -1,4 +1,13 @@
 {
     "extends": "stylelint-config-standard",
-    "media-feature-range-notation": "prefix"
+    "media-feature-range-notation": "prefix",
+    "declaration-block-no-redundant-longhand-properties": [
+    true,
+    {
+      "ignoreLonghands": [
+        "justify-self",
+        "align-items"
+      ]
+    }
+  ]
 }
