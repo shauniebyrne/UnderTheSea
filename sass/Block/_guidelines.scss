@@ -9,6 +9,11 @@
     display: inline-block;
 }
 
+#guidelines .link-guidelines {
+    width: max(5vw, 250px);
+    @include centered;
+}
+
 @include breakpoint(computer) {
     #guidelines .container {
         display: grid;

@@ -1,30 +1,75 @@
 //bubble images created with CSS Shapes
 
-#about, #guidelines, #contribute, #files, .profile, #styles {
-  position: relative;
-}
+@include breakpoint(computer) {
 
-#main .container::before, #main .container::after, 
-.profile .container::before, .profile .container::after,
-#styles .container::before, #styles .container::after {
-  content: "";
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-image: radial-gradient(circle at 70% 30%, white 10%, #6baed6);
-  position: absolute;
-  z-index: -1;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+    #about, #guidelines, #contribute, #styles {
+        position: relative;
+    }
 
-.container::before {
-    top: 30%;
-    left: 30%;
-}
+    #about .container::before, #about .container::after,
+    #contribute .container::before, #contribute .container::after,
+    #guidelines .container::after, #styles .container::before,
+    #styles .container::after {
+        content: "";
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-image: radial-gradient(circle at 70% 30%, white 5%, #6baed6 60%);
+        position: absolute;
+        z-index: -1;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 
-.container::after {
-  top:50%;
-  left: 40%;
+    #about .container:nth-child(1)::before,
+    #contribute .container:nth-child(2)::before {
+        top: 35%;
+        left: 12%;
+    }
+
+    #about .container:nth-child(1)::after,
+    #contribute .container:nth-child(2)::after {
+        top: 65%;
+        left: 5%;
+    }
+
+    #about .container:nth-child(2)::before {
+        top: 30%;
+        right: 12%;
+    }
+
+    #about .container:nth-child(2)::after {
+        top: 60%;
+        right: 5%;
+    }
+
+    #contribute .container:nth-child(1)::before {
+        top: 50%;
+        right: 12%;
+    }
+
+    #contribute .container:nth-child(1)::after {
+        top: 100%;
+        right: 2%;
+    }
+
+    #guidelines .container::after {
+        top: 47%;
+        left: 1%;
+    }
+
+    #styles .container::before {
+        top: 62%;
+        left: 3%;
+    }
+
+    #styles .container::after {
+        top: 5%;
+        right: 22%;
+    }
+
+    #files .container::after, #files .container::before {
+        display: none;
+    }
 }

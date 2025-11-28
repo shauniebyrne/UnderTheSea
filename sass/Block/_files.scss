@@ -39,5 +39,6 @@
 
     #files .container a {
         width: max(5vw, 200px);
+        @include centered;
     }
 }
